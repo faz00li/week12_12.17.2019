@@ -1,0 +1,48 @@
+@{
+  Layout = "_Layout";
+}
+
+@model LocalEats.Models.Cafe;
+
+<hr/>
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-sm">
+      <p>@Html.DisplayNameFor(model => model.CafeName): @Html.DisplayFor(model => model.CafeName)</p>
+
+      <p>@Html.DisplayNameFor(model => model.CafeId): @Html.DisplayFor(model => model.CafeId)</p>
+
+      <p>@Html.DisplayNameFor(model => model.Owner): @Html.DisplayFor(model => model.Owner)</p>
+
+      <p>@Html.DisplayNameFor(model => model.Description):</p>
+      <p>@Html.DisplayFor(model => model.Description)</p>
+    </div>
+
+    <div class="col-sm">
+      @using(Html.BeginForm())
+      {
+        @Html.HiddenFor(model => model.CafeId)
+
+        <p>@Html.LabelFor(model => model.CafeName) @Html.TextBoxFor(model => model.CafeName)</p>
+
+
+        <p>@Html.LabelFor(model => model.Owner)      @Html.TextBoxFor(model => model.Owner)</p>
+
+
+        <p>@Html.LabelFor(model => model.Description) @Html.TextBoxFor(model => model.Description)</p>
+
+        <button type="submit">Edit</button>
+      }
+    </div>
+
+  </div>
+
+
+  <hr/>
+
+  <p>@Html.ActionLink("Back to Details", "Details", new {id = @Model.CafeId})
+
+</div>

@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+
+@model LocalEats.Models.Cafe
+
+<h2>Delete @Model.CafeName?</h2>
+
+<hr/>
+<p>
+@using(Html.BeginForm())
+{
+  <input type="submit" value="Delete"/>
+}
+</p>
+<hr/>
+
+<p>@Html.ActionLink("Back To Details", "Details", new {id = @Model.CafeId})</p>

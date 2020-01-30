@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+@using LocalEats.Models
+@model LocalEats.Models.Cuisine
+
+
+
+
+@using(Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.CuisineId)
+  <input type="submit" value="Confirm Delete">
+}

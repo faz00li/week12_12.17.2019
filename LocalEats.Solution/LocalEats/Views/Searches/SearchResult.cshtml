@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+@model LocalEats.Models.Cafe;
+
+<h2>CAFE DETAILS BELOW</h2>
+<hr/>
+
+<h3>@Html.DisplayNameFor(model => model.CafeName): @Html.DisplayFor(model => model.CafeName)</h3>
+
+<h3>@Html.DisplayNameFor(model => model.CafeId): @Html.DisplayFor(model => model.CafeId)</h3>
+
+<h3>@Html.DisplayNameFor(model => model.Owner): @Html.DisplayFor(model => model.Owner)</h3>
+
+<h3>@Html.DisplayNameFor(model => model.Description):</h3>
+<p>@Html.DisplayFor(model => model.Description)</p>
+
+<p>@Html.ActionLink("Edit Details", "Edit", new {id = @Model.CafeId})
+<p>@Html.ActionLink("Show all cafes", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

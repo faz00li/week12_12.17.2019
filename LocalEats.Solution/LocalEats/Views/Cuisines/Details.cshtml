@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+@model LocalEats.Models.Cuisine
+
+
+<hr/>
+
+<h3>@Html.DisplayNameFor(model => model.CuisineType): @Html.DisplayFor(model => model.CuisineType)</h3>
+
+<h3>@Html.DisplayNameFor(model => model.CuisineId): @Html.DisplayFor(model => model.CuisineId);</h3>
+
+<button>@Html.ActionLink($"Edit {@Model.CuisineType}", "Edit", new {id = @Model.CuisineId})</button>
+
+<hr/>

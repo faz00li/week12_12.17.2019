@@ -1,0 +1,30 @@
+@{
+  Layout = "_Layout";
+}
+
+
+@model LocalEats.Models.Cafe
+
+<h3>Search by cafe or cuisine?</p>
+
+<div class="container">
+  <form class="toggle">
+      <input type="radio" id="choice1" name="choice" value="creative">
+      <label for="choice1">Cafe</label>
+
+      <input type="radio" id="choice2" name="choice" value="productive">
+      <label for="choice2">Cuisine</label>
+
+      <div id="flap"><span class="content">productive</span></div>
+  </form>
+</div>
+
+
+
+
+@using(Html.BeginForm("SearchResult", "Searches", FormMethod.Post, new {id = "searchByName"}))
+{
+  @Html.LabelFor(model => model.CafeName)
+  @Html.TextBoxFor(model => model.CafeName)
+  <button type="submit">Search</button>
+}

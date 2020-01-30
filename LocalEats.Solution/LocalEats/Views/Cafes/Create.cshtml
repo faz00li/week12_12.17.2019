@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+
+@model LocalEats.Models.Cafe
+
+
+@using (Html.BeginForm())
+{
+  <p>@Html.LabelFor(model => model.CafeName) @Html.TextBoxFor(model => model.CafeName)</p>
+  <p><input type="submit" value="Add"/></p>
+}
